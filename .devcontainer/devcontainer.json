@@ -33,6 +33,6 @@
             "onAutoForward": "notify"
         }
     },
-    "postCreateCommand": "pip install --user -r requirements.txt && mkdir -p logs && echo 'Starting TensorBoard...' && tensorboard --logdir logs --host 0.0.0.0 --port 6006",
+    "postCreateCommand": "pip install --user -r requirements.txt && mkdir -p logs/fit",
     "remoteUser": "vscode"
 }
