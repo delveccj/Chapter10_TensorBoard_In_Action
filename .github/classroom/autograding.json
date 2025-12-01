@@ -3,7 +3,7 @@
     {
       "name": "TODO Code Cells Check",
       "setup": "pip install -r requirements.txt",
-      "run": "python -c \"import json; import re; nb=json.load(open('Chapter10_Neural_Networks_Tutorial.ipynb')); cells=[c for c in nb['cells'] if c['cell_type']=='code' and any('TODO' in str(s) for s in c.get('source',[]))]; print(f'Found {len(cells)} TODO cells'); [print(f'TODO cell {i} has code: {bool(c.get(\\\"source\\\") and any(line.strip() and not line.strip().startswith(\\\"#\\\") and \\\"TODO\\\" not in line for line in c[\\\"source\\\"]))}') for i,c in enumerate(cells)]; exit(0 if all(c.get('source') and any(line.strip() and not line.strip().startswith('#') and 'TODO' not in line for line in c['source']) for c in cells) else 1)\"",
+      "run": "python -c \"import json; import re; nb=json.load(open('tensor_board_tutorial.ipynb')); cells=[c for c in nb['cells'] if c['cell_type']=='code' and any('TODO' in str(s) for s in c.get('source',[]))]; print(f'Found {len(cells)} TODO cells'); [print(f'TODO cell {i} has code: {bool(c.get(\\\"source\\\") and any(line.strip() and not line.strip().startswith(\\\"#\\\") and \\\"TODO\\\" not in line for line in c[\\\"source\\\"]))}') for i,c in enumerate(cells)]; exit(0 if all(c.get('source') and any(line.strip() and not line.strip().startswith('#') and 'TODO' not in line for line in c['source']) for c in cells) else 1)\"",
       "input": "",
       "output": "",
       "comparison": "exact",
@@ -13,7 +13,7 @@
     {
       "name": "Notebook Execution Test",
       "setup": "",
-      "run": "python -m nbconvert --to notebook --execute Chapter10_Neural_Networks_Tutorial.ipynb --output test_output.ipynb",
+      "run": "python -m nbconvert --to notebook --execute tensor_board_tutorial.ipynb --output test_output.ipynb",
       "input": "",
       "output": "",
       "comparison": "exact",
